@@ -14,6 +14,8 @@ import { SharedModule } from '../shared/shared.module';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 import { AccountSettingssComponent } from './account-settingss/account-settingss.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AccountSettingssComponent } from './account-settingss/account-settingss
         Graficas1Component,
         IncrementadorComponent,
         GraficoDonaComponent,
-        AccountSettingssComponent
+        AccountSettingssComponent,
+        PromesasComponent,
+        RxjsComponent
     ],
     exports: [
         PagesComponent,
