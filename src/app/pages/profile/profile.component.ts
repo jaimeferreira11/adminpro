@@ -23,11 +23,11 @@ export class ProfileComponent implements OnInit {
   guardar( usuario: Usuario) {
 
     this.usuario.nombre = usuario.nombre;
-    
+
     if ( !this.usuario.google ) {
       this.usuario.email = usuario.email;
     }
-  
+
     this._usuarioService.actualizarUsuario(this.usuario)
       .subscribe();
   }
@@ -51,11 +51,12 @@ export class ProfileComponent implements OnInit {
     let reader = new FileReader();
     let urlImagenTemp = reader.readAsDataURL(archivo);
 
+
     reader.onloadend = () => this.imagenTemp = reader.result;
 
   }
 
-  cambiarImagen(){
+  cambiarImagen() {
 
     this._usuarioService.cambiarImagen(this.imagenSubir, this.usuario._id);
   }
