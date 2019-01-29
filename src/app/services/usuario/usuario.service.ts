@@ -29,6 +29,25 @@ export class UsuarioService {
     this.cargarStorage();
   }
 
+  verificarSesion() {
+
+    let url = URL + '/login/renuevatoken?token=' + this.token;
+
+    return this.http.get(url)
+    .pipe(
+      map ( () => {
+      return true;
+    }),
+
+    catchError(err => {
+      this.router.navigate(['/login']);
+      swal('Expiro tu session', 'Vuelve a loguearte', 'error');
+      return throwError(err);
+      })
+
+    );
+
+  }
 
   estaLogueado() {
 
