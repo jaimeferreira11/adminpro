@@ -23,6 +23,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 
@@ -41,7 +42,8 @@ import { ProfileComponent } from './profile/profile.component';
         RxjsComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        BusquedaComponent
     ],
     exports: [
         PagesComponent,
