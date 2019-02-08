@@ -21,9 +21,11 @@ import { AccountSettingssComponent } from './account-settingss/account-settingss
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 
@@ -43,7 +45,10 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         ProfileComponent,
         UsuariosComponent,
         // ModalUploadComponent,
-        BusquedaComponent
+        BusquedaComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        MedicoComponent
     ],
     exports: [
         // PagesComponent,

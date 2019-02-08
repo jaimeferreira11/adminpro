@@ -10,6 +10,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 import { AdminGuard } from '../services/services.index';
 import { SessionGuard } from '../services/services.index';
@@ -29,6 +32,12 @@ const pagesRoutes: Routes = [
     // ROLE_ADMIN
     { path: 'usuarios', canActivate: [AdminGuard, SessionGuard],
     component: UsuariosComponent, data: { titulo: 'Mantenimiento de usuarios'} },
+    { path: 'hospitales', canActivate: [AdminGuard, SessionGuard],
+    component: HospitalesComponent, data: { titulo: 'Mantenimiento de hospitales'} },
+    { path: 'medicos', canActivate: [AdminGuard, SessionGuard],
+    component: MedicosComponent, data: { titulo: 'Mantenimiento de medicos'} },
+    { path: 'medico/:id', canActivate: [AdminGuard, SessionGuard],
+    component: MedicoComponent, data: { titulo: 'Ficha medico'} },
 
     { path: '', redirectTo: '/dashboard', canActivate: [SessionGuard], pathMatch: 'full' }
 
